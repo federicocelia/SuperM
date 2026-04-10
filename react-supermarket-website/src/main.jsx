@@ -20,4 +20,16 @@ function Product() {
   );
 }
 
-createRoot(document.querySelector("#root")).render(<Product />);
+function App() {
+  // Checking the rendering of multiple products inside the .products-grid
+  return (
+    <div className="products-grid">
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+    </div>
+  );
+}
+
+createRoot(document.querySelector("#root")).render(<App />);

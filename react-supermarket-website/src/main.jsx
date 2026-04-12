@@ -9,10 +9,16 @@ function App() {
   // Checking the rendering of multiple products inside the .products-grid
   return (
     <div className="products-grid">
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+      <Product
+        name="Pineapple"
+        price={200}
+        image="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1726640668/react-tutorial/superm-v2/pineapple.jpg"
+      />
+      <Product
+        name="Banana"
+        price={75}
+        image="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1726640668/react-tutorial/superm-v2/banana.jpg"
+      />
     </div>
   );
 }

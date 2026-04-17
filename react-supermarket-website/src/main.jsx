@@ -4,27 +4,21 @@ import { StrictMode } from "react";
 import "./index.css";
 import { createRoot } from "react-dom/client";
 import Product from "./Product";
+import products from "./data";
 
-function App() {
+function App(props) {
   // Checking the rendering of multiple products inside the .products-grid
   return (
     <div className="products-grid">
-      <Product
-        name="Pineapple"
-        price={200}
-        image="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1726640668/react-tutorial/superm-v2/pineapple.jpg"
-      />
-      <Product
-        name="Banana"
-        price={75}
-        image="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1726640668/react-tutorial/superm-v2/banana.jpg"
-      />
+      {props.products.map((product) => {
+        return <Product key={product.id} value={product} />;
+      })}
     </div>
   );
 }
 
 createRoot(document.querySelector("#root")).render(
   <StrictMode>
-    <App />
+    <App products={products} />
   </StrictMode>,
 );

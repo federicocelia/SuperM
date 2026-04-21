@@ -154,6 +154,11 @@ body.dark {
   color: var(--black);
 }
 
+.remove-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 h1 {
   font-weight: normal;
   font-size: 1.9rem;
